@@ -4,7 +4,9 @@
 Brief overview of application
 
 ## Contributors
-Hector Velez: [@Hectorscreativeworld](https://github.com/Hectorscreativeworld) Hunter Trammell: [@huntertrammell](https://github.com/huntertrammell)
+Hector Velez: [@Hectorscreativeworld](https://github.com/Hectorscreativeworld) 
+
+Hunter Trammell: [@huntertrammell](https://github.com/huntertrammell)
 
 ## Tech
 This concept site was built with 💚 using [Vue.js](https://vuejs.org) &amp; [GSAP](https://greensock.com) 
