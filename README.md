@@ -1,19 +1,15 @@
 # greenspook
 ![Cover art for Project]()
 ## About
----
 Brief overview of application
+
 ## Contributors
----
 Hector Velez: [@Hectorscreativeworld](https://github.com/Hectorscreativeworld) Hunter Trammell: [@huntertrammell](https://github.com/huntertrammell)
 
 ## Tech
----
-
 This concept site was built with 💚 using [Vue.js](https://vuejs.org) &amp; [GSAP](https://greensock.com) 
 
 ## Story
----
 This project contains the poem ***Hallowe’en in a Suburb*** written by H.P. Lovecraft and was sourced from [The H.P. Lovecraft Archive](https://www.hplovecraft.com/).
 
 ### *Scene 1*
