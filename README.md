@@ -4,7 +4,7 @@
 Brief overview of application
 
 ## Contributors
-Hector Velez: [@Hectorscreativeworld](https://github.com/Hectorscreativeworld) 
+Hector Velez: [@coffeepub](https://github.com/coffeepub) 
 
 Hunter Trammell: [@huntertrammell](https://github.com/huntertrammell)
 
