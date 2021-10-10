@@ -3,8 +3,10 @@
   <Intro />
 </template>
 
-<style>
+<style lang="scss">
+@include font("Noirden", "@/assets/fonts/noirden/Noirden-Regular");
 body {
+  font-family: "Noirden";
   background-image: url("./assets/images/bkg/wallColor.png");
   background-size: cover;
   background-position: center;

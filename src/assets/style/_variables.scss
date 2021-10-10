@@ -1,0 +1,15 @@
+$primary-font: whitesmoke;
+
+// possible update needed to conditionally font files.
+@mixin font($font-family, $font-file) {
+  @font-face {
+    font-family: $font-family;
+    src: url($font-file + ".eot"); /* IE9 Compat Modes */
+    src: url($font-file + ".eot?#iefix") format("embedded-opentype"),
+      /* IE6-IE8 */ url($font-file + ".woff") format("woff"),
+      /* Modern Browsers */ url($font-file + ".ttf") format("truetype"); /* Safari, Android, iOS */
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+  }
+}
