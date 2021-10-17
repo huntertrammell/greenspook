@@ -13,6 +13,32 @@ body {
   background-attachment: fixed;
   margin: 0;
 }
+
+// MOBILE
+.mobile-stack {
+  &_item {
+    &--top {
+      @media (max-width: $lg) {
+        z-index: 20;
+      }
+    }
+    @media (max-width: $lg) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+    }
+  }
+
+  @media (max-width: $lg) {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    z-index: 5;
+    margin: 0 !important;
+  }
+}
 </style>
 
 <script>
