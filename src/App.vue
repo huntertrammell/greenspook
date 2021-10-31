@@ -1,6 +1,8 @@
 
 <template>
-  <Intro />
+<Controls/>
+<Intro />
+
 </template>
 
 <style lang="scss">
@@ -44,6 +46,7 @@ body {
 <script>
 import { gsap } from "gsap";
 import Intro from "./pages/Intro.vue";
+import Controls from "./components/controls.vue"
 export default {
   mounted() {
     const title = this.$refs.title;
@@ -51,6 +54,7 @@ export default {
   },
   components: {
     Intro,
+    Controls,
   },
 };
 </script>
