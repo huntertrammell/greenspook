@@ -24,61 +24,58 @@
         </div>
         <!-- column -->
         <div class="mobile-stack_item col-md-12 col-lg-6">
+          <!-- Position Relative -->
           <div class="frame">
-            <!-- Couple Frame -->
+            <!-- Couple Frame Position Absolute-->
             <div class="frame-item">
-              <div class="frame-item_layers">
-                <img
-                  src="../assets/images/intro/couple/BACKGROUND_For_COUPLE.png"
-                  alt="picture frame background"
-                  width="460"
-                  height="669"
-                />
-                <!-- Guy_Couple -->
-                <img
-                  src="../assets/images/intro/couple/Guy_Couple_Only.png"
-                  alt="guy in couple picture"
-                  width="460"
-                  height="669"
-                />
-                <!-- Girl Couple -->
-                <img
-                  src="../assets/images/intro/couple/Women_COUPLE_Only.png"
-                  alt="Women in couple picture"
-                  width="460"
-                  height="669"
-                />
-                <!-- Couple Frame -->
-                <img
-                  src="../assets/images/intro/couple/FRAME_For_COUPLE.png"
-                  alt="Frame for couple picture"
-                  width="460"
-                  height="669"
-                />
-              </div>
+              <!-- Position Relative -->
+
+              <img
+                src="/assets/images/intro/couple/BACKGROUND_For_COUPLE.png"
+                alt="picture frame background"
+                width="460"
+                height="669"
+              />
+              <!-- Guy_Couple -->
+              <img
+                src="/assets/images/intro/couple/Guy_Couple_Only.png"
+                alt="guy in couple picture"
+                width="460"
+                height="669"
+              />
+              <!-- Girl Couple -->
+              <img
+                src="/assets/images/intro/couple/Women_COUPLE_Only.png"
+                alt="Women in couple picture"
+                width="460"
+                height="669"
+              />
+              <!-- Couple Frame -->
+              <img
+                src="/assets/images/intro/couple/FRAME_For_COUPLE.png"
+                alt="Frame for couple picture"
+                width="460"
+                height="669"
+              />
             </div>
 
             <!-- Fisherman Frame -->
             <div class="frame-item">
-              <div class="frame-item_layers">
-                <img
-                  src="../assets/images/intro/FrameFishing.png"
-                  alt="couple in picture"
-                  width="622"
-                  height="536"
-                />
-              </div>
+              <img
+                src="/assets/images/intro/FrameFishing.png"
+                alt="couple in picture"
+                width="622"
+                height="536"
+              />
             </div>
             <!-- Family Frame -->
             <div class="frame-item">
-              <div class="frame-item_layers">
-                <img
-                  src="../assets/images/intro/FrameFamily.png"
-                  alt="couple in picture"
-                  width="679"
-                  height="592"
-                />
-              </div>
+              <img
+                src="/assets/images/intro/FrameFamily.png"
+                alt="couple in picture"
+                width="679"
+                height="592"
+              />
             </div>
           </div>
         </div>
@@ -87,8 +84,8 @@
   </section>
 </template>
 
-<style lang='scss' scoped>
-@include font("BlackLagoon", "@/assets/fonts/blackLagoon/BlackLagoon");
+<style lang="scss" scoped>
+@include font('BlackLagoon', '@/assets/fonts/blackLagoon/BlackLagoon');
 .intro-menu {
   display: flex;
   justify-content: center;
@@ -101,7 +98,7 @@
     rgba(0, 0, 0, 0) 75%
   );
   h1 {
-    font-family: "BlackLagoon";
+    font-family: 'BlackLagoon';
     color: $primary-font;
     font-size: 5rem;
     line-height: 0.76;
@@ -133,19 +130,17 @@
 section {
   height: 100vh;
   width: 100vw;
-  background-image: url("../assets/images/bkg/bricks.png");
+  background-image: url('../assets/images/bkg/bricks.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 /* Frame */
 .frame {
-  position: relative;
-  top: 0%;
   width: 100%;
   height: 100vh;
   &-item {
-    position: absolute;
+    position: relative;
     width: 275px;
     height: auto;
     @media (max-width: $md) {
@@ -160,11 +155,10 @@ section {
       }
     }
     &:nth-child(2) {
-      bottom: 2%;
+      top: 68%;
       left: 5%;
       @media (max-width: $sm) {
-        left: unset;
-        right: -43%;
+        left: 68%;
         top: 39%;
       }
     }
@@ -172,8 +166,7 @@ section {
       top: 40%;
       left: 50%;
       @media (max-width: $lg) {
-        left: unset;
-        right: 2%;
+        left: 68%;
         top: 58%;
       }
       @media (max-width: $md) {
@@ -185,14 +178,11 @@ section {
         left: 5%;
       }
     }
-    &_layers {
-      position: relative;
-      img {
-        position: absolute;
-        display: block;
-        width: 100%;
-        height: auto;
-      }
+    img {
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: auto;
     }
   }
 }
