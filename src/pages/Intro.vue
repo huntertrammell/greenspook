@@ -27,7 +27,7 @@
           <!-- Position Relative -->
           <div class="frame">
             <!-- Couple Frame Position Absolute-->
-            <div class="frame-item">
+            <FrameItem gsapSelector="couple">
               <!-- Position Relative -->
 
               <img
@@ -45,11 +45,15 @@
               />
               <!-- Girl Couple -->
               <img
+                class="gs-lighting_person"
                 src="/assets/images/intro/couple/Women_COUPLE_Only.png"
                 alt="Women in couple picture"
                 width="460"
                 height="669"
               />
+              <div
+                class="frame-item_clip-path frame-item_clip-path--couple"
+              ></div>
               <!-- Couple Frame -->
               <img
                 src="/assets/images/intro/couple/FRAME_For_COUPLE.png"
@@ -57,26 +61,55 @@
                 width="460"
                 height="669"
               />
-            </div>
+            </FrameItem>
 
             <!-- Fisherman Frame -->
-            <div class="frame-item">
+            <FrameItem gsapSelector="fisher">
               <img
-                src="/assets/images/intro/FrameFishing.png"
+                src="/assets/images/intro/Fisher_man/BG_Fishing.png"
+                alt="picture BG"
+                width="622"
+                height="536"
+              />
+
+              <img
+                src="/assets/images/intro/Fisher_man/Tree_Fishing.png"
                 alt="couple in picture"
                 width="622"
                 height="536"
               />
-            </div>
+              <img
+                src="/assets/images/intro/Fisher_man/Water_Fishing.png"
+                alt="couple in picture"
+                width="622"
+                height="536"
+              />
+              <img
+                class="gs-lighting_person"
+                src="/assets/images/intro/Fisher_man/Fishing_Man.png"
+                alt="couple in picture"
+                width="622"
+                height="536"
+              />
+              <div
+                class="frame-item_clip-path frame-item_clip-path--fisher"
+              ></div>
+              <img
+                src="/assets/images/intro/Fisher_man/Frame_Fishing.png"
+                alt="couple in picture"
+                width="622"
+                height="536"
+              />
+            </FrameItem>
             <!-- Family Frame -->
-            <div class="frame-item">
+            <FrameItem>
               <img
                 src="/assets/images/intro/FrameFamily.png"
                 alt="couple in picture"
                 width="679"
                 height="592"
               />
-            </div>
+            </FrameItem>
           </div>
         </div>
       </div>
@@ -85,7 +118,7 @@
 </template>
 
 <style lang="scss" scoped>
-@include font('BlackLagoon', '@/assets/fonts/blackLagoon/BlackLagoon');
+@include font("BlackLagoon", "@/assets/fonts/blackLagoon/BlackLagoon");
 .intro-menu {
   display: flex;
   justify-content: center;
@@ -98,7 +131,7 @@
     rgba(0, 0, 0, 0) 75%
   );
   h1 {
-    font-family: 'BlackLagoon';
+    font-family: "BlackLagoon";
     color: $primary-font;
     font-size: 5rem;
     line-height: 0.76;
@@ -130,7 +163,7 @@
 section {
   height: 100vh;
   width: 100vw;
-  background-image: url('../assets/images/bkg/bricks.png');
+  background-image: url("../assets/images/bkg/bricks.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -178,6 +211,30 @@ section {
         left: 5%;
       }
     }
+    &_clip-path {
+      background-color: rgb(235, 235, 235);
+      position: absolute;
+      display: block;
+      opacity: 0;
+      &--couple {
+        clip-path: ellipse(50% 50% at 50% 50%);
+        width: 275px;
+        height: 399px;
+        @media (max-width: $md) {
+          width: 225px;
+          height: 327px;
+        }
+      }
+      &--fisher {
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+        width: 275px;
+        height: 236px;
+        @media (max-width: $md) {
+          width: 225px;
+          height: 193px;
+        }
+      }
+    }
     img {
       position: absolute;
       display: block;
@@ -187,3 +244,12 @@ section {
   }
 }
 </style>
+
+<script>
+import FrameItem from "../components/frame.vue";
+export default {
+  components: {
+    FrameItem,
+  },
+};
+</script>

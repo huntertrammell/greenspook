@@ -1,6 +1,6 @@
 <template>
   <div class="controls">
-    <AudioCtrl
+    <Ctrl
       v-for="(btn, index) in buttons"
       :key="'btn_' + index"
       :button="btn.button"
@@ -23,7 +23,7 @@
 </style>
 
 <script>
-import AudioCtrl from "./audio.vue";
+import Ctrl from "./audio.vue";
 export default {
   data() {
     return {
@@ -42,28 +42,11 @@ export default {
             type: ".svg",
           },
         },
-        {
-          name: "lighting",
-          audio: {
-            src: [
-              "/assets/audio/lighting_audio/lighting_one.mp3",
-              "/assets/audio/lighting_audio/lighting_two.mp3",
-            ],
-            autoplay: false,
-            loop: false,
-            random: true,
-          },
-          button: {
-            src: "/assets/images/utils/lighting_",
-            alt: "lighting control icon",
-            type: ".svg",
-          },
-        },
       ],
     };
   },
   components: {
-    AudioCtrl,
+    Ctrl,
   },
 };
 </script>
