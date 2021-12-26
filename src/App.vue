@@ -1,14 +1,12 @@
 
 <template>
-<Controls/>
-<Intro />
-
+  <Controls />
+  <Intro />
 </template>
 
 <style lang="scss">
-@include font("Noirden", "@/assets/fonts/noirden/Noirden-Regular");
 body {
-  font-family: "Noirden";
+  font-family: "Montserrat", sans-serif;
   background-image: url("./assets/images/bkg/wallColor.png");
   background-size: cover;
   background-position: center;
@@ -46,7 +44,7 @@ body {
 <script>
 import { gsap } from "gsap";
 import Intro from "./pages/Intro.vue";
-import Controls from "./components/controls.vue"
+import Controls from "./components/controls.vue";
 export default {
   mounted() {
     const title = this.$refs.title;
