@@ -7,7 +7,7 @@
 <style lang="scss">
 body {
   font-family: "Montserrat", sans-serif;
-  background-image: url("assets/images/bkg/wallColor.png");
+  background-image: url("../assets/images/bkg/wallColor.png");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
