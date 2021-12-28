@@ -9,16 +9,24 @@
         >
           <!-- INTRO TEXT -->
           <div class="intro-menu">
-            <div class="p-1 text-center">
-              <h1>ColD<br />WinteR<br />NighT</h1>
-              <nav>
-                <ul>
-                  <li>TexT 1</li>
-                  <li>TexT 2</li>
-                  <li>TexT 3</li>
-                  <li>TexT 4</li>
-                </ul>
-              </nav>
+            <div class="p-1 text-center title">
+              <transition-group
+                tag="ul"
+                appear
+                @before-enter="beforeEnter"
+                @enter="enter"
+              >
+                <li
+                  v-for="(icon, index) in icons"
+                  :key="icon.text"
+                  :data-index="index"
+                >
+                  <div>
+                    <h1>{{ icon.text }}</h1>
+                  </div>
+                </li>
+              </transition-group>
+              <!-- <h1>ColD<br />WinteR<br />NighT</h1> -->
             </div>
           </div>
         </div>
@@ -133,11 +141,11 @@
   h1 {
     font-family: "BlackLagoon";
     color: $primary-font;
-    font-size: 5rem;
+    font-size: 8rem;
     line-height: 0.76;
     letter-spacing: 0.2rem;
   }
-  nav {
+  transition {
     ul {
       list-style-type: none;
       display: flex;
@@ -246,8 +254,39 @@ section {
 </style>
 
 <script>
+import { ref } from "vue";
+import gsap from "gsap";
 import FrameItem from "../components/frame.vue";
 export default {
+  setup() {
+    const icons = ref([
+      {
+        text: "ColD",
+      },
+      {
+        text: "WinteR",
+      },
+      {
+        text: "NighT",
+      },
+    ]);
+    const beforeEnter = (el) => {
+      console.log("before enter");
+      el.style.opacity = 0;
+      el.style.transform = "translateY(100px)";
+    };
+    const enter = (el, done) => {
+      console.log("Starting to enter -,make transition");
+      gsap.to(el, {
+        opacity: 1,
+        y: 0,
+        duration: 0.8,
+        onComplete: done,
+        delay: el.dataset.index * 0.2,
+      });
+    };
+    return { icons, beforeEnter, enter };
+  },
   components: {
     FrameItem,
   },

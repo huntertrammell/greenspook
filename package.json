@@ -7,7 +7,7 @@
     "serve": "vite preview"
   },
   "dependencies": {
-    "gsap": "^3.7.1",
+    "gsap": "^3.9.1",
     "sass": "^1.42.1",
     "vue": "^3.2.13"
   },
