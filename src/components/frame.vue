@@ -11,7 +11,13 @@ export default {
   data() {
     return {
       name: "lighting",
-      audioSrc: ["/assets/audio/lighting_audio/lighting_one.mp3"],
+      audioSrc: [
+        "/assets/audio/lighting_audio/lighting_one.mp3",
+        "/assets/audio/lighting_audio/lighting_two.mp3",
+        "/assets/audio/lighting_audio/NEW_Lightning_1.wav",
+        "/assets/audio/lighting_audio/NEW_Lightning_2.wav",
+        "/assets/audio/lighting_audio/NEW_Lightning_3.mp3",
+      ],
       currentSrc: "",
       isAnimationActive: false,
       id: "",

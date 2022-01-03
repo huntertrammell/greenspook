@@ -69,16 +69,25 @@ export default {
   watch: {
     playing(newValue, oldValue) {
       let music = this.$refs.audio;
+      let tracks = document.querySelectorAll("audio");
       if (music.paused) {
+        tracks.forEach((track) => {
+          track.muted = !track.muted;
+        });
         console.log(this.$refs);
         music.play();
       } else {
-        let tracks = document.querySelectorAll("audio");
         tracks.forEach((track) => {
           track.muted = !track.muted;
         });
       }
     },
+  },
+  mounted() {
+    let tracks = document.querySelectorAll("audio");
+    tracks.forEach((track) => {
+      track.muted = true;
+    });
   },
 };
 </script>

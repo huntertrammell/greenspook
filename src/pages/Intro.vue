@@ -110,9 +110,45 @@
               />
             </FrameItem>
             <!-- Family Frame -->
-            <FrameItem>
+            <FrameItem gsapSelector="family">
               <img
-                src="/assets/images/intro/FrameFamily.png"
+                src="/assets/images/intro/Family/BG_Family.png"
+                alt="couple in picture"
+                width="679"
+                height="592"
+              />
+              <img
+                class="gs-lighting_person"
+                src="/assets/images/intro/Family/Man_Family.png"
+                alt="couple in picture"
+                width="679"
+                height="592"
+              />
+              <img
+                src="/assets/images/intro/Family/Women_Kid_Family.png"
+                alt="couple in picture"
+                width="679"
+                height="592"
+              />
+              <img
+                src="/assets/images/intro/Family/Woman_Hand_Family.png"
+                alt="couple in picture"
+                width="679"
+                height="592"
+              />
+              <img
+                class="gs-lighting_person"
+                src="/assets/images/intro/Family/Man_Hand_Family.png"
+                alt="couple in picture"
+                width="679"
+                height="592"
+              />
+              <div
+                class="frame-item_clip-path frame-item_clip-path--family"
+              ></div>
+
+              <img
+                src="/assets/images/intro/Family/Frame_Family.png"
                 alt="couple in picture"
                 width="679"
                 height="592"
@@ -240,6 +276,22 @@ section {
         @media (max-width: $md) {
           width: 225px;
           height: 193px;
+        }
+      }
+      &--family {
+        clip-path: polygon(
+          25% 0%,
+          75% 0%,
+          100% 50%,
+          75% 100%,
+          25% 100%,
+          0% 50%
+        );
+        width: 275px;
+        height: 239px;
+        @media (max-width: $md) {
+          width: 225px;
+          height: 196px;
         }
       }
     }
