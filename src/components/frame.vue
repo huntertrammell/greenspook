@@ -5,6 +5,100 @@
   </div>
 </template>
 
+<style lang="scss">
+/* Frame */
+.frame {
+  width: 100%;
+  height: 100vh;
+  &-item {
+    position: relative;
+    width: 275px;
+    height: auto;
+    @media (max-width: $md) {
+      width: 225px;
+    }
+    &:nth-child(1) {
+      left: 2%;
+      top: 2%;
+      @media (max-width: $sm) {
+        left: -10%;
+        top: -10%;
+      }
+    }
+    &:nth-child(2) {
+      top: 68%;
+      left: 5%;
+      @media (max-width: $sm) {
+        left: 68%;
+        top: 39%;
+      }
+    }
+    &:nth-child(3) {
+      top: 40%;
+      left: 50%;
+      @media (max-width: $lg) {
+        left: 68%;
+        top: 58%;
+      }
+      @media (max-width: $md) {
+        top: 65%;
+      }
+      @media (max-width: $sm) {
+        right: unset;
+        bottom: 2%;
+        left: 5%;
+      }
+    }
+    &_clip-path {
+      background-color: rgb(235, 235, 235);
+      position: absolute;
+      display: block;
+      opacity: 0;
+      &--couple {
+        clip-path: ellipse(50% 50% at 50% 50%);
+        width: 275px;
+        height: 399px;
+        @media (max-width: $md) {
+          width: 225px;
+          height: 327px;
+        }
+      }
+      &--fisher {
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+        width: 275px;
+        height: 236px;
+        @media (max-width: $md) {
+          width: 225px;
+          height: 193px;
+        }
+      }
+      &--family {
+        clip-path: polygon(
+          25% 0%,
+          75% 0%,
+          100% 50%,
+          75% 100%,
+          25% 100%,
+          0% 50%
+        );
+        width: 275px;
+        height: 239px;
+        @media (max-width: $md) {
+          width: 225px;
+          height: 196px;
+        }
+      }
+    }
+    img {
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+</style>
+
 <script>
 import { gsap } from "gsap";
 export default {

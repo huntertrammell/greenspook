@@ -1,5 +1,9 @@
 <template>
-  <section role="contentinfo" aria-label="Poem introduction">
+  <section
+    class="section-intro"
+    role="contentinfo"
+    aria-label="Poem introduction"
+  >
     <div class="container-fluid p-0">
       <!-- Row -->
       <div class="mobile-stack row">
@@ -11,20 +15,18 @@
           <div class="intro-menu">
             <div class="p-1 text-center title">
               <transition-group
-                tag="ul"
+                tag="h1"
                 appear
                 @before-enter="beforeEnter"
                 @enter="enter"
               >
-                <li
+                <span
                   v-for="(icon, index) in icons"
                   :key="icon.text"
                   :data-index="index"
                 >
-                  <div>
-                    <h1>{{ icon.text }}</h1>
-                  </div>
-                </li>
+                  {{ icon.text }}
+                </span>
               </transition-group>
               <!-- <h1>ColD<br />WinteR<br />NighT</h1> -->
             </div>
@@ -180,128 +182,29 @@
     font-size: 8rem;
     line-height: 0.76;
     letter-spacing: 0.2rem;
-  }
-  transition {
-    ul {
-      list-style-type: none;
-      display: flex;
-      flex-direction: column;
-      text-align: center;
-      align-items: center;
-      justify-content: center;
-      padding: 0;
-      margin: 0;
-      li {
-        color: $primary-font;
-        font-size: 2rem;
-        font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    span {
+      color: $primary-font;
+      font-weight: 600;
+      @media (max-width: $md) {
+        font-size: 6rem;
       }
-    }
-    @media (max-width: $lg) {
-      display: none;
     }
   }
 }
 
 /* Scene Wrapper */
 section {
-  height: 100vh;
-  width: 100vw;
   background-image: url("../assets/images/bkg/bricks.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-}
-/* Frame */
-.frame {
-  width: 100%;
-  height: 100vh;
-  &-item {
-    position: relative;
-    width: 275px;
-    height: auto;
-    @media (max-width: $md) {
-      width: 225px;
-    }
-    &:nth-child(1) {
-      left: 2%;
-      top: 2%;
-      @media (max-width: $sm) {
-        left: -10%;
-        top: -10%;
-      }
-    }
-    &:nth-child(2) {
-      top: 68%;
-      left: 5%;
-      @media (max-width: $sm) {
-        left: 68%;
-        top: 39%;
-      }
-    }
-    &:nth-child(3) {
-      top: 40%;
-      left: 50%;
-      @media (max-width: $lg) {
-        left: 68%;
-        top: 58%;
-      }
-      @media (max-width: $md) {
-        top: 65%;
-      }
-      @media (max-width: $sm) {
-        right: unset;
-        bottom: 2%;
-        left: 5%;
-      }
-    }
-    &_clip-path {
-      background-color: rgb(235, 235, 235);
-      position: absolute;
-      display: block;
-      opacity: 0;
-      &--couple {
-        clip-path: ellipse(50% 50% at 50% 50%);
-        width: 275px;
-        height: 399px;
-        @media (max-width: $md) {
-          width: 225px;
-          height: 327px;
-        }
-      }
-      &--fisher {
-        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
-        width: 275px;
-        height: 236px;
-        @media (max-width: $md) {
-          width: 225px;
-          height: 193px;
-        }
-      }
-      &--family {
-        clip-path: polygon(
-          25% 0%,
-          75% 0%,
-          100% 50%,
-          75% 100%,
-          25% 100%,
-          0% 50%
-        );
-        width: 275px;
-        height: 239px;
-        @media (max-width: $md) {
-          width: 225px;
-          height: 196px;
-        }
-      }
-    }
-    img {
-      position: absolute;
-      display: block;
-      width: 100%;
-      height: auto;
-    }
-  }
 }
 </style>
 

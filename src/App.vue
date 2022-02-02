@@ -2,6 +2,7 @@
 <template>
   <Controls />
   <Intro />
+  <Scene1 />
 </template>
 
 <style lang="scss">
@@ -12,6 +13,10 @@ body {
   background-position: center;
   background-attachment: fixed;
   margin: 0;
+}
+section {
+  min-height: 100vh;
+  width: 100vw;
 }
 
 // MOBILE
@@ -44,7 +49,9 @@ body {
 <script>
 import { gsap } from "gsap";
 import Intro from "./pages/Intro.vue";
+import Scene1 from "./pages/Scene_1.vue";
 import Controls from "./components/controls.vue";
+
 export default {
   mounted() {
     const title = this.$refs.title;
@@ -52,6 +59,7 @@ export default {
   },
   components: {
     Intro,
+    Scene1,
     Controls,
   },
 };
